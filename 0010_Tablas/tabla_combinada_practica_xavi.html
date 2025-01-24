@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+  table,
+  th,
+  td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+  }
+  .fondo-gris{
+    background-color: rgb(199, 194, 194 , 0.50);
+  }
+</style>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabla Combinada test Xavi</title>
+
+</head>
+
+<body>
+  <table style="width:100%">
+    <tr class="fondo-gris">
+      <th>Nombre</th>
+      <th colspan="2">Contactos</th>
+      <th colspan="2" rowspan="2">Dirección</th>
+    </tr>
+    <tr>
+      <th class="fondo-gris"> Email</th>
+      <th class="fondo-gris">Teléfono</th>
+      <th></th>
+    </tr>
+    <tr>
+      <td>Juan Pérez</td>
+      <td>juan@example.com</td>
+      <td>+34 600 123 456</td>
+      <td rowspan="2">Calle Falsa 123, Madrid</td>
+    </tr>
+    <tr>
+      <td>Ana García</td>
+      <td>ana@example.com</td>
+      <td>+34 600 654 321</td>
+      
+    </tr>
+    <tr>
+      <td >Pedro López</td>
+      <td colspan="2">pedro@example.com</td>
+      <td >Avenida Siempre Viva 456, Barcelona</td>
+    </tr>
+
+  </table>
+</body>
+
+</html>

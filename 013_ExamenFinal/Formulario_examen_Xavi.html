@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Evaluable</title>
+
+    <style>
+        table,
+        th,
+        td,
+        tr {
+            justify-content: center;
+            border: 1px solid black;
+            text-align: center;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <form action="recibir.html"  method="GET">
+        <tr>
+            <th>Nombre</th>
+            <td>
+                <label for="nombre"></label>
+                <input type="text" name="nombre" id="nombre"><br>
+            </td>
+        </tr>
+
+        <tr>
+            <th>Email:</th>
+            <td>
+                <label for="correo"></label>
+                <input type="mail" name="correo" id="correo"><br>
+            </td>
+        </tr>
+        <tr>
+            <th>Fecha de nacimiento</th>
+            <td>
+                <label for="fecha"></label>
+                <input type="date" name="fecha" id="fecha">
+            </td>
+        </tr>
+
+        <tr>
+            <th>Elije uno o varios cursos</th>
+
+            <td><label for="cursos"></label>
+                <input type="checkbox" name="cursos" value="Python"> Python
+                <input type="checkbox" name="cursos" value="php">PHP
+                <input type="checkbox" name="cursos" value="Javascript">Javascript
+                <input type="checkbox" name="cursos" value="C++">C++
+            </td>
+        </tr>
+
+        <tr>
+            <th>Nivel de estudios</th>
+            <td>
+                <input type="radio" id="Básico" name="Nivel" value="Básico">
+                <label for="Básico">Básico</label><br>
+                <input type="radio" id="Medio" name="Nivel" value="Medio">
+                <label for="Medio">Medio</label><br>
+                <input type="radio" id="Superior" name= "Nivel" value="Superior">
+                <label for="Superior">Superior</label>
+            </td>
+        </tr>
+
+        <tr>
+            <th>Nivel de inglés:</th>
+            <td>
+                    <label for="nivel_ingles">(Entre 0 y 10):</label>
+                    <input type="range" id="nivel_ingles" name="nivel_ingles" min="0" max="10">
+                    
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2" style="text-align: center;">
+                <input type="submit" value="Enviar">
+            </td>
+        </tr>
+    </form>
+    </table>
+</body>
+
+</html>

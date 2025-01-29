@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.cta-container {
+    justify-content: center;
+    text-align: center;
+    background-image: ;
+    background-size: cover;
+
+    padding: 60px;
+}
+
+.cta-button {
+    font-size: ;
+    padding: ;
+    background-color: ;
+    color: ;
+
+}
+p{
+    font-size: 3vh;
+}
+h2{
+    font-size: 5vh;
+}

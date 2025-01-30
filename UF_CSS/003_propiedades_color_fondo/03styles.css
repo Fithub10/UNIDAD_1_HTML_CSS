@@ -2,26 +2,39 @@ body {
     margin: 0;
     padding: 0;
 }
-
+.cta-text {
+    font-family:'Times New Roman', Times, serif;
+}
 .cta-container {
-    justify-content: center;
     text-align: center;
-    background-image: ;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-image:url(https://cdn.pixabay.com/photo/2024/01/02/14/58/leaf-8483401_1280.jpg) ;
     background-size: cover;
-
     padding: 60px;
+    height: 100vh;
 }
 
 .cta-button {
-    font-size: ;
-    padding: ;
-    background-color: ;
-    color: ;
+    background-color: #00bf10;
+    color:white ;
+    border-radius: 2vh;
+    padding: 1vh;
+    margin: 0.5vh;
+    cursor: pointer;
+}
+.cta-button:hover{
+    background-color: #07580e;
+}
 
-}
 p{
-    font-size: 3vh;
-}
-h2{
+    font-style: italic;
+    color: rgb(0, 255, 102);
     font-size: 5vh;
+}
+
+h2{
+    color: rgb(31, 68, 6);
+    font-style:oblique;
+    font-size: 8vh;
 }

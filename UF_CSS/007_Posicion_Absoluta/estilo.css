@@ -1,0 +1,84 @@
+body {
+  background-color: antiquewhite;
+}
+
+#contenedor {
+  background-color: aliceblue;
+  width: 400px;
+  height: 350px;
+  margin-top: 60px;
+  margin-left: 60px;
+}
+
+.tejado {
+  position: absolute;
+  width: 360px;
+  height: 40px;
+  top: 80px;
+  left: 80px;
+  background-color: #ff7b00;
+  border: 2px solid black;
+  z-index: 1;
+}
+.casa{
+    position: absolute;
+    width: 300px;
+    height: 286px;
+    border:2px solid black;
+    top: 120px;
+    left: 110px;
+    background-color: darkgray;   
+}
+.puerta{
+    position: absolute;
+    width: 80px;
+    height: 100px;
+    background-color: maroon;
+    border: 2px solid black;
+    top: 306px;
+    left: 220px;
+}
+.ventana{
+    position: absolute;
+    border: 2px solid black;
+    background-color: bisque;
+    width: 50px;
+    height: 50px;
+    top: 270px;
+    left: 340px;
+}
+.ventana2{
+    position: absolute;
+    border: 2px solid black;
+    background-color: blue;
+    width: 60px;
+    height: 60px;
+    border-radius: 20px 20px 5px 5px;
+    top: 160px;
+    left: 130px;
+}
+.barr_hor{
+    position: absolute;
+    border: 2px solid black;
+    width: 0px;
+    height: 50px;
+    top: 270px;
+    left: 365px;
+}
+.barr_vert{
+    position:absolute;
+    border: 2px solid black;
+    width: 300px;
+    top: 250px;
+    left: 110px;
+}
+.plantas{
+    position: absolute;
+    border: 3px solid rgba(75, 8, 8, 0.84);
+    border-radius: 5px;
+    background-color:rgb(37, 124, 37) ;
+    width: 58px;
+    height: 10px;
+    top: 222px;
+    left: 130px;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout + Imagenes</title>
+    <style>
+        h1{
+            display: inline-flex;
+        }
+        aside > img{
+            width: 40px;
+            height: 40px;
+            margin-top: 4vh;
+        }
+        body{
+            color: rgb(255, 255, 255);
+            margin: 0;
+        }
+        header{
+            width:100vw;
+            height:15vh;
+            background-color: rgb(6, 14, 245);
+        }
+        footer{
+            text-align: center;
+            width:100vw;
+            height:10vh;
+            background-color: rgba(14, 14, 245);
+        }
+        nav > a{
+            text-decoration: none;
+            color: white;
+            margin: 3vh;
+        }
+        nav{
+            padding: 2vh;
+            width:100vw;
+            height:5vh;
+            background-color: rgb(154, 150, 150);
+        }
+        main{
+            display:flex;
+            width: 100vw;
+        }
+        section{
+            padding: 3vh;
+            min-width: 67vw;
+            background-color: rgb(145, 136, 126);
+            min-height: 70vh;
+            float: left;
+        }
+        aside{
+            padding: 24px;
+            display: flex;
+            width: 30vw;
+            background-color: rgb(108, 104, 105);
+            min-height: 60vh;
+            display: inline;
+            float: left;
+        }
+        #logo{
+            height: 5vh ;
+            padding: 1vh;
+        }
+        .gif{
+            width: 55vh;
+        }
+        section > img{
+            margin-top: 20px;
+        }
+
+        @media(max-width:768px){
+            section{
+                width: 100vh;
+            }
+            aside{
+                width: 100vh;
+            }
+        }
+    </style>
+</head>
+<body>
+ 
+    <header>
+        <img id="logo" src="img/logo.png">
+        <h1>Bienvenido</h1>
+    </header>
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="#">Nosotros</a>
+        <a href="#">Contacto</a>
+    </nav>
+    <main>
+        <section>
+            <h2>
+                Adelante tenemos un monton de ofertas 
+            </h2>
+                Ultimas unidades con tallas limitadas rebajadas desde un 80% hasta agotar stock.<br>
+            <img class="gif" src="img/giphy.gif">
+        </section>
+        <aside>
+            <img src="img/facebook.png"><br>
+            <img src="img/twitter.png"><br>
+            <img src="img/whatsapp.png">
+        </aside>
+    </main>
+ 
+    <footer>
+        &copy;  Curso Nascor - 2025
+    </footer>
+</body>
+</html>

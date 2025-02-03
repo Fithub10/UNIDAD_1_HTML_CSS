@@ -4,7 +4,7 @@ body, h1, p, button {
     padding: 20px;
     font-family: Arial, sans-serif;
 }
-
+/*Estilos del cuerpo*/
 body {
     display: flex;
     justify-content: center;
@@ -28,33 +28,38 @@ body {
 
 /* Imagen de perfil */
 .profile-image img {
-    border-radius: 50%;
+    border-radius: 25px 10px 10px 25px;
     margin-bottom: 1rem;
     transition: all 0.3s ease;
     width:110px
 }
-
+/*Descripcion en cursiva debajo del nombre*/
+.perfil-subnombre{
+    margin: 0;
+    padding: 0;
+    font-style: italic;  
+}
 /* Información del perfil */
 .profile-info {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
+/*Nombre del perfil*/
 .profile-name {
     color: #333;
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
     transition: all 0.3s ease;
 }
-
+/*Descripcion del perfil*/
 .profile-description {
     color: rgb(100, 100, 100);
     font-size: 1rem;
     margin-bottom: 1rem;
     transition: all 0.3s ease;
 }
-
+/*Boton del perfil con efecto de transicion cuando el cursor pasa por encima*/
 .profile-button {
     background-color: hsl(220, 90%, 56%);
     color: #fff;
@@ -64,30 +69,39 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
 }
-
+/*Efecto hover del boton*/
 .profile-button:hover {
     background-color: hsl(220, 90%, 46%);
 }
 
+/*Comienzo del @media*/
 /* Media Queries */
+/*Hace el texto responsivo a modo que augmente el tamaño de la pantalla de visualizacion*/
 
-/* Móviles (Vertical) */
+
+/* Móviles (Vertical) - Actua con las pantallas de menor tamaño hasta un maximo de 480px cambiando el color de fondo por Verde */
 @media (max-width: 480px) {
     .profile-card {
-        background-color: #ff6b6b; /* Rojo */
+        background-color: rgb(0, 128, 0); /* Verde */
     }
     .profile-name {
         font-size: 1.2rem;
     }
     .profile-description {
+        color:#333;
         font-size: 0.8rem;
+    }
+    .perfil-subnombre{
+        color: #333;
+        font-size: 0.6rem;
     }
     .profile-button {
         background-color: #4ecdc4; /* Turquesa */
     }
 }
 
-/* Móviles (Horizontal) */
+/* Móviles (Horizontal) - Actua cuando las pantallas tienen el tamaño minimo de 481px y maximo de 767px cambiando el color de fondo por turquesa */
+
 @media (min-width: 481px) and (max-width: 767px) {
     .profile-card {
         background-color: #4ecdc4; /* Turquesa */
@@ -100,12 +114,15 @@ body {
     .profile-info {
         align-items: flex-start;
     }
+    .perfil-subnombre{
+        font-size: 0.8rem;
+    }
     .profile-button {
         background-color: #ffe66d; /* Amarillo */
     }
 }
 
-/* Tabletas (Vertical) */
+/* Tabletas (Vertical) - Actua cuando las pantallas tienen el tamaño minimo de 768px y maximo de 1024px cambiando el color de fondo por Amarillo */
 @media (min-width: 768px) and (max-width: 1024px) {
     .profile-card {
         background-color: #ffe66d; /* Amarillo */
@@ -116,12 +133,15 @@ body {
     .profile-description {
         font-size: 1.2rem;
     }
+    .perfil-subnombre{
+        font-size: 1.0rem;
+    }
     .profile-button {
         background-color: #ff6b6b; /* Rojo */
     }
 }
 
-/* Tabletas (Horizontal) */
+/* Tabletas (Horizontal) - Actua cuando las pantallas de menor tamaño: un minimo de 1025px y un maximo de 1279px cambiando el color de fondo por Azul Oscuro */
 @media (min-width: 1025px) and (max-width: 1279px) {
     .profile-card {
         background-color: #1a535c; /* Azul oscuro */
@@ -140,7 +160,7 @@ body {
     }
 }
 
-/* Desktops */
+/* Desktops - Actua cuando las pantallas de menor tamaño: un minimo de 1280px y un maximo de 1919px cambiando el color de fondo por  */
 @media (min-width: 1280px) and (max-width: 1919px) {
     .profile-card {
         background-color: #4ecdc4; /* Turquesa */
@@ -154,12 +174,15 @@ body {
     .profile-description {
         font-size: 1.5rem;
     }
+    .perfil-subnombre{
+        font-size: 1.3rem;
+    }
     .profile-button {
         background-color: #ffe66d; /* Amarillo */
     }
 }
 
-/* Desktops Muy Grandes */
+/* Desktops Muy Grandes - Actua cuando las pantallas son de 1920px o superior cambiando el color de fondo por Amarillo */
 @media (min-width: 1920px) {
     .profile-card {
         background-color: #ffe66d; /* Amarillo */
@@ -178,7 +201,7 @@ body {
     }
 }
 
-/* Retina */
+/* Retina - Aplicara solo en algunos dispositivos con pantalla "Retina" de Apple */
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     .profile-card {
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);

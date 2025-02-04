@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño Creativo Flexbox con imagenes</title>
+</head>
+<style>
+    /* Reset básico */
+body, div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.titulo{
+    font-size: 4vh;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    color: rgb(89, 136, 7);
+    border-radius: 1px black;
+}
+body {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f4f8;
+}
+
+/* Contenedor flex */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 80%;
+    max-width: 1200px;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 20vh ;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para las imagenes */
+.botella {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    width: 150px;
+    height: 150px;
+    margin: 0.8rem;
+}
+
+/* Colores individuales para las imagenes */
+#botella1 {
+    border-radius: 10px 10px 0px 0;
+    background-color: #ff6b6b; /* Rojo */
+}
+
+#botella2 {
+    border-radius: 25px;
+    background-color: #4ecdc4; /* Turquesa */
+}
+
+#botella3 {
+    border-radius: 20px 0px 20px 0;
+    background-color: #ffe66d; /* Amarillo */
+}
+
+#botella4 {
+    border-radius:  0 0 15px 15px;
+    background-color: #1a535c; /* Azul oscuro */
+}
+img:hover {
+    transition: transform 0.25s ease;
+    transform:scale(120%);
+}
+img{
+    width: 85px;
+    height: 150px;
+    border-radius: 60%;
+    margin: 1.5rem;
+}
+
+
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+   /* .circle {
+        display:none
+    } */
+}
+@media (min-width: 769px ) {
+    .container{
+        flex-direction: center;
+    }
+    
+}
+
+</style>
+
+<body>
+    <p class="titulo">Botellas con IA</p>
+    
+    <div class="container">
+        <img src="ComfyUI_00085_.png" class="botella" id="botella1">
+        <img src="botella.png" class="botella" id="botella2">
+        <img src="ComfyUI_00109_.png" class="botella" id="botella3">
+        <img src="ComfyUI_00115_.png" class="botella" id="botella4">
+    </div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   } 
+body{  
+    background-position: cover;
+    background-size: 100%;
+    background-image: url(/UF_CSS/012Practica_Examen/Imagenes/fondo.jpg);
+}
+.presen-1{
+    text-shadow: 4px 4px 8px rgba(252, 215, 7, 0.797);
+    text-align: center;
+}
+h6{
+    color: aqua;
+}
+nav{
+    text-align: right;
+    padding: 0;
+    margin: 0;
+    color: aqua;
+}
+
+.texto{
+    color:aqua ;
+    text-align: left;
+}
+img{
+    position:relative;
+    height: 25px;
+    width: 25px;
+}
+nav > a {
+    padding: 4px;
+    margin: 2px;
+    text-decoration: none;
+    font-size: 5vh;
+    
+}
+.presentacion{
+    color: aquamarine;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+form{
+    text-align: center;
+    font-style:italic;
+    color: rgb(110, 248, 46);
+    display:grid;
+    margin: 1px;
+    padding: 2px;
+    justify-content:center;
+
+}
+.boton-actual{
+    color: rgba(251, 251, 251, 0.637);
+
+}
+label{
+    font-style: italic;
+}
+
+footer {
+    color: rgb(47, 255, 0);
+    text-align: center; /* Centra el texto */
+    padding: 10px 0;
+    margin-top: 0 ;
+}
+.formulario{
+    box-sizing: border-box;
+    text-align: center;
+}
+/* Ajustes responsivos */
+@media (max-width: 600px) {
+    .presen-1 {
+        font-size: 0.7em; /* Reducir tamaño en móviles */
+    }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de datos Xavi</title>
+</head>
+
+<body>
+    <script>
+
+        /* Variables que alimentan los datos*/
+
+        let numeroEntero = 5;
+        let numeroDecimal = 3.14;
+        let numeroNegativo = -10;
+        let numeros = numeroEntero + numeroDecimal + numeroNegativo;
+
+        /*Datos mostrados en consola*/
+
+        console.log("Número Entero:" + numeroEntero);
+        console.log("Número Decimal:" + numeroDecimal);
+        console.log("Numero Negativo:" + numeroNegativo);
+        console.log("La suma de los 3 tipos es:" + numeros);
+
+        /*Con typeof para ver de que tipo de numero se trata */
+
+        console.log("Número Entero:" + typeof numeroEntero);
+        console.log("Número Decimal:" + typeof numeroDecimal);
+        console.log("Numero Negativo:" + typeof numeroNegativo);
+        console.log("La suma de los 3 tipos es:" + typeof numeros);
+
+        // Parsear Objeto
+
+        let Alumno = { Nombre: 'Xavi', Edad: 29 } // objeto
+        let Nombre = Alumno.Nombre;
+        let EdadAlumno = Alumno.Edad;
+
+        // Array
+
+        let listafrutas = ['sandia', 'pera', 'kiwi']; //La informacion que contiene el array "listafrutas" ordenada empezando por 0
+        let fruta1 = listafrutas[0];
+        let fruta2 = listafrutas[1];
+        let fruta3 = listafrutas[2];
+
+        document.write("Nombre del alumno: " + Nombre); 
+        document.write("<br>Edad del alumno: " + EdadAlumno) ; 
+        document.write("<br>" +'Frutas: 1.- ' + fruta1 + ' 2.- ' + fruta2 + ' 3.- ' + fruta3) ; 
+
+    </script>
+</body>
+
+</html>

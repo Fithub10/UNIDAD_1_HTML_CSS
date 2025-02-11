@@ -1,18 +1,17 @@
 /*Funcion que pide la edad del perro*/
 
 let edadperro = parseInt(prompt("Introduce la edad actual de tu perro"));
-document.write(`<br> Edad Animal del perro: ${num1}`);
+document.write(`<br> Edad Animal del perro: ${edadperro} años`);
 
 
 
-/*Funcion que calcula la edad del perro *7 y lo muestra en document.write */
+/*Funcion Explica que calcula la edad del perro multiplicada 7 */
 
-let edadhumano = parseInt(prompt("La edad de su perro se multiplicara *7 para saber su conversion a edad humana "));
-document.write(`<br> \n Segundo número introducido: ${7}`);
+let explicacion =(`<br> \n La edad de su perro se multiplicara por 7 para convertir ese valor en su edad humana!`);
+document.write(explicacion)
 
 
-
-/*Funcion que entrega la edad humana del perro despues lo muestra  */
-
+/*Funcion que entrega la edad humana del perro despues de calcularlo y lo muestra  */
+let edadhumano = 7 ;
 let calculo = edadperro * edadhumano;
-document.write(`<br> \n la edad real de el perro es : ${calculo}`);
+document.write(`<br> \n La edad Humana de su canino es : ${calculo} años`);

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login Captcha Xavi</title>
+    <script src="main.js"></script>
+    <style>
+        /* Estilos básicos */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+<!--Pregunta para realizar la comprobacion -->
+    <h2>Comprobacion de que es un humano:</h2>
+    <p>Para continuar, tienes que contestar de manera correcta: ¿Cuánto es 5 + 9?</p>
+
+    <!-- Input donde el usuario ingresará su respuesta -->
+    <input type="text" id="respuestaUsuario" placeholder="Escribe tu respuesta">
+
+    <!-- Botón para verificar la respuesta -->
+    <button id="verificarBtn">Verificar</button>
+
+</body>
+
+</html>

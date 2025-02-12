@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Ejercicio While y DoWhile</title>
+</head>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: darkcyan;
+    }
+</style>
+
+<body>
+    <strong>Ejemplo de Bucle Do</strong> <br>
+    <script>
+        // --- WHILE -- // 
+        //Este bucle solo aumentara el numero partiendo desde 0 la primera i
+        //  Hasta que el bucle detecte que que ya no es inferior a 10 seria la seguna i
+        // La tercera i++ es la que se imprime en incremento
+
+        let i = 0;
+        while (i < 10) {
+            document.write(i, "<br>");
+            i++;
+        }
+        // Termina de imprimir en el 9 pero la i finaliza en 10.
+
+        document.write("<br> > Separacion de Creciente a Decreciente usando while <br>")
+
+        // --- DO WHILE -- //
+        //en este caso hace lo contrario la primera i-- reduce de uno en uno partiendo de la ultima i que finalizo el bucle en 9 por lo tanto partira del 10 hacia abajo
+        do {
+            document.write(i, "<br>");
+            i--;
+        } while (i > 0);
+
+
+
+
+        //Ejemplo propio de EL WHILE 
+        // Fingiendo que un deportista tiene que saltar vallas
+        // En WHILE, el personaje saltará obstáculos hasta que decida que ya no puede más.
+
+        let saltos = 0; // Contador de saltos
+        let cansado = false; // Variable para controlar si el personaje está cansado
+
+        // Mensaje inicial
+        document.write("Empiezan los saltos de obstaculos<br>");
+
+        while (!cansado) {
+            saltos++; // Incrementamos el contador de saltos
+            document.write(`<br> ~ Salto número: ${saltos}<br>`); // Mostramos el número de salto
+
+            // Preguntamos al personaje si se siente cansado
+            cansado = confirm("¿Estas cansado? (Aceptar para detenerte, Cancelar para seguir saltando)"); // Devuelve true o false
+        }
+
+        document.write(`<br>Obstaculos totales saltados: ${saltos}! <br>`);
+
+        //Mismo ejemplo pero desarrollado en DO WHILE 
+        //En este caso el deportista saltara almenos una vez antes de elegir si quiere seguir con las vueltas 
+
+        let saltosDoWhile = 0; // Contador de saltos para el bucle do...while
+        let cansadoDoWhile; // Variable para controlar si el personaje está cansado
+
+        // Mensaje inicial para el bucle do...while
+        document.write("¡El personaje está listo para saltar obstáculos con do...while!<br><br>");
+
+        do {
+            saltosDoWhile++; // Incrementamos el contador de saltos
+            document.write(`¡Salto (do...while) número : ${saltosDoWhile}! <br>`); // Mostramos el número de salto
+
+            // Preguntamos al personaje si se siente cansado
+            cansadoDoWhile = confirm("¿Te sientes cansado? (Aceptar para sí, Cancelar para no)"); // Devuelve true o false
+        } while (!cansadoDoWhile); // El bucle se repite mientras el personaje no esté cansado
+
+        document.write(`<br>¡Total de saltos (do...while) completados: ${saltosDoWhile}! <br>`);
+    </script>
+</body>
+
+</html>

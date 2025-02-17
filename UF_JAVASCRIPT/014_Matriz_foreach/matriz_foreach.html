@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matriz foreach</title>
+</head>
+
+<body>
+    <script>
+        // La array matriz que guarda las 3 cajas con 3 valores dentro de cada una.
+        let matriz = [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9]
+        ];
+    
+        document.write("Imprime los numeros 3 y 5 accediendo a su ubicacion dentro del Array<br>");
+        // Variables que muestran el 3 y el 5 accediendo a su posicion en el array matriz
+        let x = matriz[0][2];
+        let y = matriz[1][1];
+        document.write("Tu primer numero es: " + x + "<br>"); // Imprime el numero 3
+        document.write("El segundo numero es el: " + y + "<br>"); // Imprime el numero 5
+    
+        document.write('<hr>');
+    
+        // Funcion que recorre todo el array
+        function texto(valor, indice, array) {
+            document.write(valor + "<br>");
+        }
+        matriz.forEach(texto);
+    
+        document.write('<hr>');
+    
+        // Modificar el array que sea multiple de 3 y lo imprimir
+        function modifica(valor, indice, array) {
+            valor.forEach(function (value, i) {
+                if (value % 3 == 0) {
+                    array[indice][i] = "m";
+                }
+            });
+            document.write(valor + '<br>');
+        }
+    
+        matriz.forEach(modifica);
+    </script>
+</body>
+
+</html>

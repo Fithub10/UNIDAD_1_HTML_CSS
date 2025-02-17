@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array datos persona tipo "JSON"</title>
+</head>
+<body>
+    <script>
+        // Definimos el objeto persona
+        let persona = {
+            nombre: "Juan",
+            apellido: "Nadie",
+            edad: 50,
+            ojosColor: {
+                izquierdo: "Verde",
+                derecho: "Azul"
+            },
+            altura: 1.80
+        };
+
+        // Imprimimos los datos del objeto
+        document.write(
+            "Hola " + persona.nombre + " " + persona.apellido + ", tu edad es de " +
+            persona.edad + " años y mides " + persona.altura + " m.<br>" +
+            "Eres como Bowie porque tienes el ojo izquierdo " + persona.ojosColor.izquierdo +
+            " y el derecho " + persona.ojosColor.derecho + ". Bienvenido!!<br><hr>"
+        );
+
+        // Cambiamos el nombre y el color del ojo derecho
+        persona.nombre = "David"; // Cambiamos el nombre a "David"
+        persona.ojosColor.derecho = "Marrón"; // Cambiamos el color del ojo derecho a "Marrón"
+
+        // Imprimimos el nuevo texto con los cambios
+        document.write(
+            "Hola " + persona.nombre + " " + persona.apellido + ", tu edad es de " +
+            persona.edad + " años y mides " + persona.altura + " m.<br>" +
+            "Eres como Bowie porque tienes el ojo izquierdo " + persona.ojosColor.izquierdo +
+            " y el derecho " + persona.ojosColor.derecho + ". Bienvenido!!"
+        );
+    </script>
+</body>
+</html>

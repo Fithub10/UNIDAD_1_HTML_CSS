@@ -1,0 +1,172 @@
+/* Variables de colores y estilos base */
+:root {
+    --color-primario: #2A5C82;
+    --color-secundario: #5DA9E9;
+    --color-fondo: #f8fafc;
+    --sombra-suave: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --color-premio-sorteado: #bbf7d0; /* Color de fondo para premios sorteados */
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-fondo);
+    color: #2d3748;
+    margin: 0;
+    padding: 2rem;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.contenedor-principal {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Tarjeta principal (Participantes) */
+.tarjeta-principal {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: var(--sombra-suave);
+    transition: transform 0.2s ease;
+}
+
+.tarjeta-principal:hover {
+    transform: translateY(-2px);
+}
+
+/* Tarjeta lateral (Premios) */
+.tarjeta-lateral {
+    background: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: var(--sombra-suave);
+    align-self: start;
+    position: sticky;
+    top: 2rem;
+}
+
+/* Estilos comunes para tarjetas */
+.tarjeta-titulo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-primario);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--color-secundario);
+}
+
+/* Lista de participantes */
+.lista-participantes {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.participante-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: #f8fafc;
+    border-radius: 0.5rem;
+    transition: background 0.2s ease;
+}
+
+.participante-item:hover {
+    background: #f1f5f9;
+}
+
+/* Lista de premios */
+.lista-premios {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.premio-item {
+    padding: 0.75rem;
+    background: #fff7ed;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+.premio-item::before {
+    content: "🎁";
+    font-size: 1.1rem;
+}
+
+/* Estilo para premios sorteados */
+.premio-item.sorteado {
+    background: var(--color-premio-sorteado); /* Cambia el fondo al color definido */
+    font-weight: 600; /* Texto en negrita */
+}
+
+/* Formulario y botones */
+.formulario-sorteo {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.entrada-texto {
+    padding: 0.8rem 1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: border-color 0.2s ease;
+}
+
+.entrada-texto:focus {
+    outline: none;
+    border-color: var(--color-secundario);
+}
+
+.boton-primario {
+    background: var(--color-primario);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.boton-primario:hover {
+    background: #1e4a6e;
+    transform: translateY(-1px);
+}
+
+/* Sección de resultados */
+.resultado-sorteo {
+    background: #f0fdf4;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin-top: 2rem;
+    text-align: center;
+    border: 2px solid #bbf7d0;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .contenedor-principal {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .tarjeta-lateral {
+        position: static;
+    }
+    
+    body {
+        padding: 1rem;
+    }
+}

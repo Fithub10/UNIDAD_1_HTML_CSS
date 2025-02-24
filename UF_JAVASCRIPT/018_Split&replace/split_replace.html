@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Split , Replace Xavi</title>
+</head>
+<body>
+    <h1>Cambio de frase ejercicio</h1>
+    <form id="formulario">
+        <input id="frase" type="text">
+        <input type="submit">
+    </form>
+    <h2>Lista del ejercicio</h2>
+    <ul id="lista">
+
+    </ul>
+    <script>
+        let form = document.querySelector('#form');
+        let lista = document.querySelector('#lista');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            let frase = document.querySelector('#frase').value;
+            let arrayFrase = frase.split(' ');
+
+            // Limpiar la lista antes de agregar nuevas palabras
+            lista.innerHTML = '';
+
+            arrayFrase.forEach(palabra => {
+                let elLista = document.createElement('li');
+                elLista.textContent = palabra;
+                lista.appendChild(elLista);
+            });
+        });
+    </script>
+
+</body>
+</html>

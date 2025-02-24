@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Array datos persona tipo "JSON"</title>
 </head>
+
 <body>
+
     <script>
+
         // Definimos el objeto persona
         let persona = {
             nombre: "Juan",
@@ -19,6 +23,39 @@
             altura: 1.80
         };
 
+
+        // Diccionario para traducir nombres técnicos a nombres más legibles
+        const traducciones = {
+            nombre: "Nombre",
+            apellido: "Apellido",
+            edad: "Edad",
+            ojosColor: "Color de ojos",
+            altura: "Altura"
+        };
+
+        // Iteramos sobre las propiedades del objeto persona
+        for (const x in persona) {
+            if (typeof persona[x] === "object" && persona[x] !== null) {
+                // Si el valor es un objeto, mostramos sus propiedades internas con nombres legibles
+                document.body.innerHTML += `${traducciones[x] || x}: `;
+                for (const key in persona[x]) {
+                    if (key === "izquierdo") {
+                        document.body.innerHTML += `Izquierdo: ${persona[x][key]}, `;
+                    } else if (key === "derecho") {
+                        document.body.innerHTML += `Derecho: ${persona[x][key]}, `;
+                    }
+                }
+                document.body.innerHTML = document.body.innerHTML.slice(0, -2); // Quitamos la última coma y espacio
+                document.body.innerHTML += `<br>`;
+            } else {
+                // Si el valor no es un objeto, lo mostramos directamente con nombres legibles
+                document.body.innerHTML += `${traducciones[x] || x}: ${persona[x]}<br>`;
+            }
+        }
+
+        document.write("<hr>")
+
+
         // Imprimimos los datos del objeto
         document.write(
             "Hola " + persona.nombre + " " + persona.apellido + ", tu edad es de " +
@@ -27,17 +64,21 @@
             " y el derecho " + persona.ojosColor.derecho + ". Bienvenido!!<br><hr>"
         );
 
+
         // Cambiamos el nombre y el color del ojo derecho
         persona.nombre = "David"; // Cambiamos el nombre a "David"
         persona.ojosColor.derecho = "Marrón"; // Cambiamos el color del ojo derecho a "Marrón"
+
 
         // Imprimimos el nuevo texto con los cambios
         document.write(
             "Hola " + persona.nombre + " " + persona.apellido + ", tu edad es de " +
             persona.edad + " años y mides " + persona.altura + " m.<br>" +
-            "Eres como Bowie porque tienes el ojo izquierdo " + persona.ojosColor.izquierdo +
-            " y el derecho " + persona.ojosColor.derecho + ". Bienvenido!!"
+            "Lo siento ya no eres como Bowie , porque ahora tienes el ojo izquierdo " + persona.ojosColor.izquierdo +
+            " y el derecho " + persona.ojosColor.derecho + ". Alucinante!!"
         );
+        
     </script>
 </body>
+
 </html>

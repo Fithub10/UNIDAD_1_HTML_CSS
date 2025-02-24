@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteo Premium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> <!-- Enlazamos el archivo CSS -->
+</head>
+<body>
+    <div class="contenedor-principal">
+        <!-- Tarjeta principal (Participantes y formulario) -->
+        <div class="tarjeta-principal">
+            <h2 class="tarjeta-titulo">Sorteo Premium</h2>
+            
+            <!-- Formulario para añadir participantes -->
+            <form class="formulario-sorteo" id="form">
+                <input type="text" class="entrada-texto" id="nombre" placeholder="Nombre del participante" required>
+                <button type="submit" class="boton-primario">Añadir Participante</button>
+            </form>
+
+            <!-- Lista de participantes -->
+            <h3 class="tarjeta-titulo">Lista de Participantes</h3>
+            <ul class="lista-participantes" id="listaConcursantes"></ul>
+
+            <!-- Espacio para mostrar el resultado del sorteo -->
+            <div class="resultado-sorteo" id="resultadoSorteo"></div>
+        </div>
+
+        <!-- Tarjeta lateral (Premios y controles) -->
+        <div class="tarjeta-lateral">
+            <h3 class="tarjeta-titulo">Premios Disponibles</h3>
+            <ul class="lista-premios" id="listaPremios"></ul>
+            
+            <!-- Controles para el sorteo -->
+            <div class="controles-sorteo">
+                <button class="boton-primario" id="botonSortear" style="margin-top: 1.5rem; width: 100%;">
+                    Sortear Ganador
+                </button>
+                <button class="boton-primario" id="botonPremio" style="margin-top: 0.5rem; width: 100%;">
+                    Asignar Premio
+                </button>
+                <button class="boton-primario" id="limpiarLista" style="margin-top: 0.5rem; width: 100%; background: #64748b;">
+                    Limpiar Lista
+                </button>
+                <button class="boton-primario" id="reiniciar" style="margin-top: 0.5rem; width: 100%; background: #dc2626;">
+                    Reiniciar Todo
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enlazamos el archivo JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

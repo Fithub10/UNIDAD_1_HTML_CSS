@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular Edad con Fecha introducida y mostrarla</title>
+</head>
+
+<body>
+    <h2>Introduce tu Dia de nacimiento y calcularemos que dia de la semana naciste</h2>
+    <p id="edad"></p> <!-- Aquí es donde vamos a mostrar la edad calculada -->
+
+    <script>
+
+        // Esta función validará si la fecha introducida es correcta
+        function esFechaValida(fecha) {
+            // Usamos una expresión regular para asegurarnos de que la fecha esté en el formato YYYY-MM-DD
+            const regex = /^\d{4}-\d{2}-\d{2}$/;
+            if (!regex.test(fecha)) {
+                return false; // Si no coincide con el formato, retornamos false
+            }
+            const date = new Date(fecha); // Creamos un objeto Date con la fecha introducida
+            const timestamp = date.getTime(); // Obtenemos el timestamp de la fecha
+            if (typeof timestamp !== 'number' || Number.isNaN(timestamp)) {
+                return false; // Si el timestamp no es un número válido, retornamos false
+            }
+            // Descomponemos la fecha introducida en año, mes y día
+            const [year, month, day] = fecha.split('-');
+            // Verificamos que el año, mes y día coincidan con los valores del objeto Date
+            if (date.getUTCFullYear() !== parseInt(year) ||
+                date.getUTCMonth() + 1 !== parseInt(month) ||
+                date.getUTCDate() !== parseInt(day)) {
+                return false; // Si no coinciden, retornamos false
+            }
+
+            return true; // Si todo es correcto, retornamos true
+        }
+
+
+
+
+        //Solicitamos al usuario que introduzca su fecha de nacimiento
+        let fechaNacimiento = prompt("Introduce tu fecha con el siguiente formato: YYYY-MM-DD");
+
+        let alerta = esFechaValida(fechaNacimiento);
+
+        if (!alerta) {
+            alert("Introduce una fecha correcta y o en el formato correcto")
+            window.location.reload()
+        }
+
+        // Creamos un objeto Date con la fecha de nacimiento introducida
+        let objFechaNacimiento = new Date(fechaNacimiento);
+        // Obtenemos la fecha actual
+        let fechaActual = new Date();
+
+        // Descomponemos la fecha de nacimiento en año, mes y día
+        let nacimFullYear = objFechaNacimiento.getFullYear();
+        let nacimMes = objFechaNacimiento.getMonth();
+        let nacimientoDia = objFechaNacimiento.getDate();
+
+        // Descomponemos la fecha actual en año, mes y día
+        let actualFullYear = fechaActual.getFullYear();
+        let actualMes = fechaActual.getMonth();
+        let actualDia = fechaActual.getDate();
+
+        // Calculamos la edad restando el año de nacimiento del año actual
+        let edad = actualFullYear - nacimFullYear;
+
+        // Aquí verificamos si ya ha pasado el cumpleaños este año
+        if (actualMes < nacimMes || (actualMes === nacimMes && actualDia < nacimientoDia)) {
+            edad--; // Si no ha pasado, restamos un año a la edad
+        }
+
+        // Finalmente, mostramos la edad calculada en el elemento HTML con id 'edad'
+        document.querySelector('#edad').innerHTML = 'Hola, tu edad es de ' + edad;
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar Color de Fondo</title>
+    <style>
+        /* Estilos para el contenedor principal (el cuadro grande) */
+        .contenedor {
+            background-color: chocolate;
+            /* Le damos un color de fondo inicial, en este caso, marrón */
+            width: 400px;
+            /* Definimos un ancho fijo de 400 píxeles */
+            height: 400px;
+            /* Y una altura también de 400 píxeles */
+            display: flex;
+            /* Usamos flex para manejar el diseño interno */
+            align-items: center;
+            /* Centramos el contenido verticalmente */
+            justify-content: center;
+            /* Centramos el contenido horizontalmente */
+            font-family: Arial, sans-serif;
+            /* Elegimos una fuente sencilla y legible */
+            color: white;
+            /* El texto dentro del contenedor será blanco */
+            font-size: 24px;
+            /* Y tendrá un tamaño de 24 píxeles */
+        }
+
+        /* Estilos para el botón que cambia el color */
+        .boton-color {
+            background-color: teal;
+            /* Color de fondo del botón, un verde azulado */
+            color: white;
+            /* El texto del botón será blanco */
+            border: none;
+            /* Quitamos el borde predeterminado del botón */
+            padding: 15px 30px;
+            /* Añadimos espacio interno: 15px arriba/abajo y 30px izquierda/derecha */
+            border-radius: 8px;
+            /* Redondeamos las esquinas del botón */
+            cursor: pointer;
+            /* Cambiamos el cursor a una manita cuando pasas sobre el botón */
+            font-size: 18px;
+            /* Tamaño del texto del botón */
+            margin-top: 20px;
+            /* Añadimos un margen superior para separarlo del contenedor */
+        }
+
+        /* Efecto cuando pasas el cursor sobre el botón */
+        .boton-color:hover {
+            background-color: #006666;
+            /* Cambiamos el color de fondo a un tono más oscuro al hacer hover */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Este es el contenedor principal donde se muestra el color actual -->
+    <div class="contenedor" id="caja">Color actual</div>
+
+    <!-- Este es el botón que usaremos para cambiar el color de fondo -->
+    <button class="boton-color" id="boton">Cambiar Color</button>
+
+    <script>
+        // Función para generar un color hexadecimal aleatorio
+        function generarColorAleatorio() {
+            const letrasHex = '0123456789ABCDEF'; // Estos son los caracteres válidos para un color hexadecimal
+            let color = '#'; // Todos los colores en hexadecimal empiezan con #
+
+            // Generamos 6 caracteres aleatorios para completar el código del color
+            for (let i = 0; i < 6; i++) {
+                // Math.random() genera un número aleatorio entre 0 y 1
+                // Multiplicamos por 16 para obtener un índice entre 0 y 15
+                // Math.floor() redondea hacia abajo para obtener un número entero
+                // letrasHex[] nos da el caracter correspondiente al índice
+                color += letrasHex[Math.floor(Math.random() * 16)];
+            }
+
+            return color; // Devolvemos el color generado, por ejemplo, "#A1B2C3"
+        }
+
+        // Seleccionamos el contenedor (el cuadro grande) usando su ID
+        const caja = document.getElementById('caja');
+
+        // Seleccionamos el botón usando su ID
+        const boton = document.getElementById('boton');
+
+        // Escuchamos el evento de clic en el botón
+        boton.addEventListener('click', () => {
+            // Cuando el botón es clickeado, generamos un nuevo color aleatorio
+            const nuevoColor = generarColorAleatorio();
+
+            // Cambiamos el color de fondo del contenedor al nuevo color generado
+            caja.style.backgroundColor = nuevoColor;
+
+            // También actualizamos el texto dentro del contenedor para mostrar el código del color
+            caja.textContent = nuevoColor;
+            
+
+        });
+    </script>
+</body>
+
+</html>
